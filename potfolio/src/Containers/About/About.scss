@@ -1,0 +1,163 @@
+.App__About{
+    display: flex;
+    flex-direction: row;
+
+    @media screen and (max-width:450px){
+       
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+   
+}
+.App__About-left{
+    flex: 1;
+
+     .card-image{
+            height:500px ;
+            width: 350px;
+            overflow: hidden;
+            box-shadow: -50px -50px 0 -40px var(--red-color) ,
+                         50px 50px 0 -40px  var(--red-color);
+
+            
+            img{
+                height: 550px;
+                width: 550px;
+                align-content: center;
+                justify-content: center;
+                // filter: grayscale(100%);
+                // -webkit-filter: grayscale(100%);
+
+            }
+     }
+
+
+     
+     @media screen and (max-width:450px){
+        display: none;
+
+        margin-top: 10px;
+        .card-image{
+            height:300px ;
+            width: 200px;
+
+            img{
+                height: 350px;
+                width: 350px;
+            }
+        }
+     }
+
+
+}
+.App__About-right{
+    flex: 1;
+
+    div{
+        h1{
+           
+            font-weight: bold;
+            margin:5px 0 25px 0;
+            border-bottom: 3px solid var(--primary-color);
+            width: 300px;
+        
+        }
+        h3{
+            font-size: 25px;
+            color: var(--primary-color);
+        }
+        
+        p{
+            margin: 10px 0;
+            color: var(--black-color);
+            text-align: justify;
+            margin: 25px 0;
+        }
+    }
+
+    @media screen and (max-width:450px){
+       
+    h1{
+        width: 150px;
+    }
+}
+}
+
+
+
+.App__About-card{
+    display: grid;
+    grid-template-columns: auto auto ;
+    margin: 15px;
+    padding: 10px 5px;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+
+    .About-card-item{
+        margin: 10px;
+        padding: 5px;
+
+      text{
+        font-size: 20px;
+        text-transform: capitalize;
+        margin: 4px;
+      }
+
+      .email{
+        text-transform: lowercase;
+        text-overflow:clip;
+      }
+
+      .text-field{
+        font-weight: 700;
+      }
+    }
+
+    @media screen and (max-width:450px){
+       width: 80vw;
+       grid-template-columns: auto ;
+       flex-wrap: wrap;
+       
+
+       .About-card-item{
+
+        margin: 5px;
+        padding: 2px;
+        flex-wrap: wrap;
+
+        text{
+            font-size: 18px;
+            flex-wrap: wrap;
+            
+          }
+          flex-wrap: wrap;
+          
+       }
+       flex-wrap: wrap;
+    
+    }
+}
+
+
+.App__About-icon{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 5px;
+    margin: 10px;
+    img{
+     
+        height: 100px;
+        width: fit-content;
+        border-radius: 25px;
+    }
+
+    @media screen and (max-width:450px){
+        margin-top: 15px;
+
+        img{
+            margin-top: 15px;
+        }
+    }
+}

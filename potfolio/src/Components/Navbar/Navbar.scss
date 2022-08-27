@@ -1,0 +1,176 @@
+.App__Navbar{
+    width: 100%;
+    height: 8%;
+    top: 0;
+    position: fixed;
+    backdrop-filter:blur(4px);
+    z-index: 10;
+    padding: 5px 15px;
+   
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    background-color: rgba(255,255,255,0.25);
+    border: 1px solid  rgba(255,255,255,0.18);
+
+    @media screen and (max-width:450px) {
+       height: 7%;
+    }
+    
+}
+
+.App__Navbar-logo{
+    img{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+        
+        @media screen and (max-width:450px) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+ 
+    padding: 8px;
+
+    @media screen and (max-width:450px) {
+        padding: 5px;
+    }  
+}
+
+.App__Navbar-list{
+  padding: 5px;
+flex: 1;
+margin-top: 10px;
+
+  li{
+    margin: 0 30px; 
+    flex-direction: column; 
+    cursor: pointer; 
+
+    @media screen and (max-width:450px) {
+        margin: 0 5px;
+        display: none;
+    }
+
+    div{
+        background-color: transparent;
+        border-radius: 55px;
+        margin-top: 5px;
+        border-bottom: 3px solid var(--primary-color);
+        opacity: 0;
+         
+     }
+
+    a{
+        color: var(--grey-color);
+        transition: all 0.3s ease-in-out;
+        
+        &:hover{
+            color:var(--primary-color);
+        }
+
+    }
+   
+&:hover{
+    a{
+        color:var(--primary-color);
+    }
+    div{
+         opacity: 1;
+    }
+} 
+
+&:active{
+    a{
+        color:var(--primary-color);
+    }
+    div{
+         opacity: 1;
+    }
+} 
+
+}
+}
+
+
+.App__Navbar-menu{
+    padding: 5px;
+    flex-direction: column;
+
+  
+    @media screen and (min-width:450px) {
+        display: none;
+    }
+    button{
+        border: none;
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        border-radius: 50%;
+        cursor: pointer;
+        margin: 10px;
+        transition: all 0.3s ease-in-out;
+        
+      top: 0;
+      right: 0;
+      position: fixed;
+        
+        &:hover{
+            background-color:var(--primary-color) ;
+            i{
+                color:var(--white-color);
+            }
+        }
+    }
+}
+
+
+.App__Navbar-menu-false{
+width: 100vw;
+height: 130vh;
+
+    background: url('../../Assets/bgWhite.png');
+    flex-direction: row-reverse;
+    z-index: 100;
+    background-color: var(--white-color);
+    background-size: cover;
+    background-repeat: repeat;
+    
+  
+button{
+   margin-right: 10px;
+   transition: all 0.3s ease-in-out;
+}
+
+
+ul{
+    margin-top:500px;
+
+    
+
+    li{
+        margin: 65PX;
+       margin-right: 150px;
+
+        a{
+            color: var(--grey-color);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            &:hover{
+                 color:var(--primary-color);
+            }
+        }
+
+    
+    }
+}   
+
+    
+}
+

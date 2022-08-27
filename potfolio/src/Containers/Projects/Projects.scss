@@ -1,0 +1,188 @@
+.App__Projects{
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media screen and (max-width:450px) {
+        flex-direction: column;
+        
+    }
+}
+.App__Projects-headText{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    
+    h3{
+        width: 25%;
+        font-size: 32px;
+        text-transform: capitalize;
+    }
+
+    .App__Projects-headText-left{
+        width: 50%;
+        p{
+            color: var(--brown-color);
+        }
+
+
+        a{
+            display: inline-block;
+            margin-top: 10px;
+            transition: all 0.5s ease;
+            color: var(--black-color);
+
+            i{
+                margin-left: 5px;
+                color: var(--black-color);
+            }
+
+        &:hover{
+            margin-left: 1rem;
+            color: var(--primary-color);
+
+            i{
+                color: var(--primary-color);
+            }
+        }
+        }
+    }
+
+    @media screen and (max-width:45px) {
+        flex-direction: row-reverse;
+
+        h3{
+            display: block;
+        }
+    }
+}
+
+.App__Projects-projects{
+    flex: 1;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 90vw;
+    margin-bottom: 2rem;
+
+}
+
+.cards-wrapper{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 37rem;
+    overflow: auto;
+    padding: 2rem;
+    scroll-behavior: smooth;
+    border-radius: 15px;
+    width: 100%;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    .card{
+        display: grid;
+        height: 100%;
+        min-width: 100%;
+        scroll-behavior: smooth;
+
+        .card-img{
+            margin: 15px;
+            padding: 15px;   
+            background-color: var(--white-color);
+            box-shadow: 0px 0px 1.3rem var(--black-color);
+            cursor: pointer;
+            height: 350px;
+            width:480px; 
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            flex-direction: column;
+
+            img{
+                transition: 0.5s ease;
+                backface-visibility: hidden;
+                height: 320px;
+                width:450px; 
+                justify-content: flex-start;
+
+            }
+
+            .middle{
+                transition: 0.5s ease;
+                position: absolute;
+                top: 80%;
+                transform: translate(-50%,-50%);
+                display: inline-block;
+                width: 100%;
+                overflow: hidden;
+                
+            }
+
+            h2{
+                opacity: 0;
+                text-align: left;
+                text-transform: capitalize;
+                width: 53.5%;
+                padding: 10px;
+                font-size: 30px;
+                background-color:var(--gray-color);
+                border-top-left-radius: 10px;
+                color: var(--white-color);
+                overflow: hidden;
+            }
+
+            &:hover{
+
+                h2{
+                    opacity: 1;
+                }
+                box-shadow: 0px 0px 1.3rem rgb(   0, 150, 255,0.5);
+            }
+        }
+
+
+     
+
+        .project-btn{
+            button{
+                border: none;
+                outline: none;
+                padding: 15px;
+                text-transform: capitalize;
+                color: var(--white-color);
+                font-size: 17px;
+                border-radius: 5px;
+                margin: 27px;
+                cursor: pointer;
+            }
+            .github{
+                margin-right: 25px;
+                background-color: var(--brown-color);
+            }
+
+            .livedemo{
+                background-color: var(--primary-color);
+            }
+        }
+
+      
+     
+    }
+
+    @media screen and (max-width:450px) {
+       display: none;
+        gap: 25rem;
+        overflow: auto;
+        padding: 2rem;
+
+        .card{
+            img{
+                height: 250px;
+            }
+        }
+
+    }
+}

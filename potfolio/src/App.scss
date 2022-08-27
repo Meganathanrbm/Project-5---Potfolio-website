@@ -1,0 +1,172 @@
+.app{
+    background-color: var(--secondary-color);
+}
+
+.app__container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5px 55px;
+    display: flex;
+    flex-direction: row;
+    
+    @media screen and (max-width:450px){
+        padding: 15px 25px;
+        
+    }
+}
+
+span{
+    color: var(--primary-color);
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight:550 ;
+    
+}
+
+h1{
+    font-size: 56px;
+  
+}
+
+h2{
+    font-size: 40px;
+}
+
+.p,p{
+    font-size: 20px;
+    color: var(--black-color);
+    line-height: 26pt;
+   
+}
+
+@media screen and (max-width:450px){
+    p{
+        font-size: 19px; 
+        line-height: 20pt;
+        }
+
+        h1{
+            font-size: 40px;
+        }
+
+
+}
+
+
+li{
+    list-style: none;
+}
+.app__flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__wrapper{
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    padding:  4rem 1rem 2rem;
+
+    @media screen and (max-width:450px){
+        padding: 4rem 1rem 2rem;
+    }
+}
+
+.app__social{
+    height: 100vh;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+   
+    padding: 1rem;
+
+    div{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: var(--white-color);
+        margin: 0.24rem 0;
+        border: 1px solid var(--lighGray-color);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: all 0.3s ease-in-out;
+
+        a{
+            color: var(--grey-color);
+        
+
+            svg{
+                width: 15px;
+                height: 15px;
+                color: var(--grey-color);
+            }
+
+         }
+
+         &:hover{
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+    
+            svg{
+                color: var(--white-color);
+            }
+         }
+    }  
+}
+
+.App__Content{
+    margin-top: 75px;
+     justify-content: center;
+     @media screen and (max-width:450px){
+        margin-top: 7.5vh;
+    }
+ 
+ }
+
+.head-text{
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--black-color);
+    font-size: 50px;
+}
+
+.app__naviation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+
+    .app__navigation-dot{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+       
+        background-color: #cbcbcb;
+        margin: 0.5rem;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover{
+            background-color: var(--primary-color);
+        }
+
+    }
+}
+
+@media screen and (max-width:450px){
+    .app__naviation,
+    .app__social{
+        display: none;
+    }
+}
