@@ -12,6 +12,7 @@ const [message, setMessage] = useState('');
 
 const formSubmitted=()=>{
   setFormSubmit(true)
+
 }
   return (
     <div className='App__Contact app__container App__Content ' >
@@ -21,7 +22,7 @@ const formSubmitted=()=>{
         <motion.div 
              whileHover={{scale:1.1}}  className='wrap-item'>
           <div> <img src={images.email}/></div>
-          <a href='#'>meganathanrbm@gmail.com</a>
+          <a href='mailto:meganathanrbm@gmail.com'>meganathanrbm@gmail.com</a>
         </motion.div>
         <motion.div 
              whileHover={{scale:1.1}}  className='wrap-item'>
@@ -35,10 +36,10 @@ const formSubmitted=()=>{
         {!formSubmit? <div className="App__Contact-form app__flex">
          <div className='app__flex form-field'> <input className='p' type='text' onChange={(e)=>setName(e.target.value)} placeholder='Your Name'/> </div>
          <div className='app__flex form-field'> <input className='p' type='text' onChange={(e)=>setEmail(e.target.value)} placeholder='Your Email'/></div>
-         <div className='app__flex form-field'> <textarea className='p' name="message" onChange={(e)=>setMessage(e.target.value)} placeholder='Enter Your Message' cols="30" rows="5"/></div>
+         <div className='app__flex form-field'> <textarea className='p' name="message" onChange={(e)=>setMessage(e.target.value)} placeholder='Enter Your Message' cols="30" rows="4"/></div>
          <div className='form-field-btn'> <button onClick={formSubmitted} >Send Message</button></div>
          </div>:<div className="App__Contact-form app__flex">
-          <h3>Thank you for getting in touch!</h3>
+          <h3>Thank you for getting in touch! 👍</h3>
           </div>}
          
 

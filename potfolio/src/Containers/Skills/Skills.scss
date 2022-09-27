@@ -10,6 +10,7 @@
 
 
         p{
+            text-align: justify;
             padding:10px 0;
         }
     }
@@ -20,7 +21,9 @@
     @media screen and (max-width:450px) {
         padding: 10px;
         width: 100%;
-        height: 55%;
+        height: 60%;
+        align-items: center;
+       
     }
 }
 
@@ -34,24 +37,18 @@
 
 
     @media screen and (max-width:450px){
-
-        grid-template-rows: auto auto;
-        grid-auto-flow: column;
-        row-gap: 10px;
-        column-gap: 20px;
+        //background-color: rebeccapurple;
+        grid-template-columns: auto;
         overflow: auto;
-        justify-content: flex-start;
         scroll-behavior: smooth;
-        margin: 15px;
-       width: 100%;
-       height: 100%;
+        padding: 25px;
+        width: 55vw;
+        height: 100%;
+        margin: 5px auto;
 
        &::-webkit-scrollbar{
         display: none;
-    }
-
-
-       
+    }    
     }
        
 }
@@ -92,8 +89,7 @@
 
         @media screen and (max-width:450px){
             width: 150px;
-             height: 150px;
-           
+            height: 150px;
 
              img{
                 height: 50px;

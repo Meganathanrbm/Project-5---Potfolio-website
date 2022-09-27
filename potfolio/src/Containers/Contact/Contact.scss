@@ -17,7 +17,6 @@ justify-content: flex-start;
             padding: 5px;
             width: 19rem;
             height:fit-content;
-
             border-radius: 10px;
 
             img{
@@ -43,11 +42,32 @@ justify-content: flex-start;
     }
 
     @media screen and (max-width:450px) {
+        width: 100%;
+
         h2{
-            font-size: 40px;
+            line-height: 3rem;
         }
         .App__Contact-wrap{
             flex-direction: column;
+        }
+        .wrap-item{
+           margin: 15px auto;
+
+
+            img{
+                height: 35px;
+                width: fit-content;
+                margin: 10px;
+                margin-right: 20px;
+            }
+
+            a{
+                color: var(--black-color);
+                font-weight: 400;
+                font-size: 15;
+               text-transform: lowercase;
+
+            }
         }
     }
 }
@@ -72,7 +92,7 @@ justify-content: flex-start;
     .form-field{
         display: block;
         width: 55vw;
-        background-color:  rgb(   0, 150, 255,0.3);
+        background-color: var(--formBackground-color);
         padding: 12px;
          margin: 15px;
          border-radius: 10px;
@@ -101,6 +121,34 @@ justify-content: flex-start;
            border: 3px solid var(--primary-color);
         }
     }
+
+     @media screen and (max-width:450px) {
+        flex-direction: column;
+        padding: 15px;
+        margin: 10px;
+        width: 90%;
+    
+        h3{
+            font-size: 30px;
+            line-height: 2;
+            text-align: center;
+        }
+        
+        .p{
+            font-size: 16px;
+            line-height: 20pt;
+        }
+    
+        .form-field{
+            width: 80vw;
+            padding: 10px;
+             margin: 10px;
+
+            input,textarea{
+                width: 80%;
+            }
+        }
+     }
 }
 
 
@@ -117,6 +165,11 @@ justify-content: flex-start;
 
         &:hover{
             background-color:rgb(   0, 150, 255,0.5) ;
+        }
+    }
+    @media screen and (max-width:450px) {
+        button{
+        margin: 25px auto 20px auto;
         }
     }
 }

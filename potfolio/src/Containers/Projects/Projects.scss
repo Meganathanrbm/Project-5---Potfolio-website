@@ -47,11 +47,21 @@
         }
     }
 
-    @media screen and (max-width:45px) {
-        flex-direction: row-reverse;
+    @media screen and (max-width:450px) {
+        gap: 2rem;
+        flex-direction: column;
 
         h3{
-            display: block;
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+            font-size: 35px;
+        }
+        .App__Projects-headText-left{
+            width: 100%;
+        }
+        a{
+            font-size: 18px;
         }
     }
 }
@@ -65,6 +75,10 @@
     border-radius: 15px;
     width: 90vw;
     margin-bottom: 2rem;
+
+    @media screen and (max-width:450px){
+        margin: 0px;
+    }
 
 }
 
@@ -150,21 +164,38 @@
             button{
                 border: none;
                 outline: none;
-                padding: 15px;
+                padding: 10px;
                 text-transform: capitalize;
                 color: var(--white-color);
-                font-size: 17px;
+                font-size: 16px;
                 border-radius: 5px;
                 margin: 27px;
                 cursor: pointer;
+               a{
+                color: var(--white-color);
+               }
             }
             .github{
                 margin-right: 25px;
                 background-color: var(--brown-color);
+                border: 3px solid var(--brown-color);
+
+                &:hover{
+                    background-color: var(--white-color);
+                    a{
+                    color: var(--brown-color);
+                }}
             }
 
             .livedemo{
                 background-color: var(--primary-color);
+                border: 3px solid var(--primary-color);
+                
+                &:hover{
+                    background-color: var(--white-color);
+                    a{
+                    color: var(--primary-color);
+                }}
             }
         }
 
@@ -173,16 +204,39 @@
     }
 
     @media screen and (max-width:450px) {
-       display: none;
+       //display: none;
         gap: 25rem;
         overflow: auto;
         padding: 2rem;
-
+        padding: 1rem;
+  
         .card{
-            img{
-                height: 250px;
+    
+            .card-img{
+                margin: 15px;
+                padding: 15px;   
+                height: 280px;
+                width:320px; 
+    
+                img{
+                    height: 250px;
+                    width:290px; 
+    
+                }
+    
+                h2{
+                    font-size: 30px;
+                    width: 54.5%;
+                }
+    
             }
         }
-
+        .project-btn{
+            margin-top: 1.5rem;
+            button{
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
     }
 }

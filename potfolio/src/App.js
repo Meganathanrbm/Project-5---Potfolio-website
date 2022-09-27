@@ -8,10 +8,15 @@ function App() {
     <div className='app'>
         <Navbar/>
         <Home/>
+        <hr/>
         <About/>
+        <hr/>
         <Skills/>
+        <hr/>
         <Projects/>
+        <hr/>
         <Contact/>
+        <hr/>
         <Footer/>
     </div>
   )

@@ -8,11 +8,9 @@ function Navbar() {
   const [menu, setMenu] = useState(false);
 
   const menuClick=(e)=>{
-    setMenu(true)
+    setMenu(!menu)
   }
-  const menuCancel=(e)=>{
-    setMenu(false)
-  }
+
   return (
     <nav className='App__Navbar'>
       <div className='App__Navbar-logo'>
@@ -29,9 +27,9 @@ function Navbar() {
 
       <div className='app__flex App__Navbar-menu'>
         {(!menu)?<div>
-          <button onClick={menuClick}><i class="fa-solid fa-bars"></i></button></div>
+          <button onClick={menuClick}><i class="fa fa-bars"></i></button></div>
         :<div className='app__flex App__Navbar-menu-false'>
-          <button onClick={menuCancel}><i class="fa-solid fa-xmark"></i></button>
+          <button onClick={menuClick}><i class="fa-solid fa-xmark"></i></button>
           <div className='app__flex App__Navbar-menu-false-list'>
           <ul className='App__Navbar-menu-true-list'>
         {['Home','About','Skills','Projects','Contact'].map((link)=>(

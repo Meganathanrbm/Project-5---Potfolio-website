@@ -9,14 +9,18 @@
 :root {
     --font-base:'DM Sans', sans-sarif;
 
+    
     --primary-color:#0096ff;
+    --formBackground-color: rgb(   0, 150, 255,0.3);
     --secondary-color:#edf2f8;
     --black-color: #030303;
     --lightGray-color: #e4e4e4;
     --gray-color: #6b7688;
+    --darkGray-color:#e1e1e133;
     --brown-color: #46364a;
     --white-color: #ffffff;
     --red-color:rgba(229,0,39,255);
+    --line-color:#e91e63;
 
     --phone-width:1024px;
 }

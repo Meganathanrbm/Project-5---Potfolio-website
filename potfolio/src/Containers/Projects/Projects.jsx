@@ -1,16 +1,16 @@
 import React from 'react';
 import './Projects.scss';
 import { AppWrap } from '../../Wrapper';
-import { icons } from 'react-icons/lib';
 import images from '../../Constant/images';
-import { motion , useAnimation} from 'framer-motion';
+import { motion } from 'framer-motion';
+import {Link, Route} from 'react-router-dom';
 
 
 const projects = [
-  {name:'potfolio',image:images.project01},
-  {name:'calculator',image:images.project02},
-  {name:'potfolio',image:images.about02},
-  {name:'potfolio',image:images.about03}
+  {name:'potfolio',image:images.project01,demo:'',github:'https://github.com/Meganathanrbm/Potfolio-website'},
+  {name:'calculator',image:images.project02,demo:'https://meganathanrbm.github.io/Calculator/',github:'https://github.com/Meganathanrbm/Calculator'},
+  {name:'todo-list',image:images.project03,demo:"https://todo-list-aca6d.web.app/",github:'https://github.com/Meganathanrbm/Todo-list'},
+  {name:'potfolio',image:images.about03,demo:'#',github:'#'}
 ]
 
 function Projects() {
@@ -38,8 +38,8 @@ function Projects() {
                     </div>
                   </motion.div>
                   <div className='project-btn app__flex'>
-                    <button className='github'>Github</button>
-                    <button className='livedemo'>live demo</button>
+                    <button className='github'><a href={item.github} target='_blank' ><em>Github</em></a></button>
+                    <button className='livedemo'><a href={item.demo} target='_blank' ><em>live demo</em></a></button>
                   </div>
                </div>
               ))}
@@ -53,3 +53,4 @@ function Projects() {
 }
 
 export default AppWrap(Projects,'Projects');
+

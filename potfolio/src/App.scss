@@ -1,20 +1,3 @@
-.app{
-    background-color: var(--secondary-color);
-}
-
-.app__container{
-    width: 100%;
-    min-height: 100vh;
-    padding: 5px 55px;
-    display: flex;
-    flex-direction: row;
-    
-    @media screen and (max-width:450px){
-        padding: 15px 25px;
-        
-    }
-}
-
 span{
     color: var(--primary-color);
 }
@@ -22,13 +5,12 @@ span{
 a{
     text-decoration: none;
     text-transform: uppercase;
-    font-weight:550 ;
-    
+    font-weight:550; 
+
 }
 
 h1{
     font-size: 56px;
-  
 }
 
 h2{
@@ -39,26 +21,55 @@ h2{
     font-size: 20px;
     color: var(--black-color);
     line-height: 26pt;
-   
 }
-
-@media screen and (max-width:450px){
-    p{
-        font-size: 19px; 
-        line-height: 20pt;
-        }
-
-        h1{
-            font-size: 40px;
-        }
-
-
-}
-
 
 li{
     list-style: none;
 }
+
+hr{
+    margin: 25px auto;
+    width: 5%;
+    border: 5px var(--brown-color) dotted;
+    border-bottom: none;
+}
+.app{
+    background-color: var(--secondary-color);
+
+
+    @media screen and (max-width:450px) {
+        p{
+            font-size: 19px; 
+            line-height: 20pt;
+            }
+    
+            h1{
+                font-size: 40px;
+            }
+            h2{
+                font-size: 35px;
+            }
+            hr{
+                width: 15%;
+                margin: 10px auto;
+            }
+    
+    }
+}
+.app__container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5px 55px;
+    display: flex;
+    flex-direction: row;
+    
+    @media screen and (max-width:450px){
+        padding: 15px 20px;
+        
+    }
+}
+
+
 .app__flex{
     display: flex;
     align-items: center;
@@ -73,7 +84,7 @@ li{
     padding:  4rem 1rem 2rem;
 
     @media screen and (max-width:450px){
-        padding: 4rem 1rem 2rem;
+        padding: 4rem 0rem 2rem;
     }
 }
 
@@ -104,7 +115,7 @@ li{
 
         a{
             color: var(--grey-color);
-        
+           
 
             svg{
                 width: 15px;

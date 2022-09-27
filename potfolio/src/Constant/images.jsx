@@ -1,6 +1,7 @@
 import email from '../Assets/email.png';
 import project01 from '../Assets/project01.png';
 import project02 from '../Assets/project02.png';
+import project03 from '../Assets/project03.png';
 import mobile from '../Assets/mobile.png';
 import api from '../Assets/api.png';
 import cpp from '../Assets/cpp.png';
@@ -57,6 +58,7 @@ export default {
   python,
   project01,
   project02,
+  project03,
   react,
   redux,
   sass,
