@@ -1,257 +1,101 @@
 
 .App__Header-container{
     flex-direction: row;
-    @media screen and (max-width:450px){
-       flex-direction:column;
-       width: 100vw;
-       margin-top: 25px;
-       height: 100vh;
+    padding-top: 75px;
 
-    } 
-}
-.App__Header-container-left{
+    .row{
 
-    display: flex;
-    justify-content: flex-start;
-
-    div{
-        padding: 10px;
-        width: 70%;
-        
-    }
-    h3{
-        margin: 10px 0px;
-        font-size: 40px;
-        //color: var(--red-color);
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        position: relative;
+        justify-content: center;
     }
 
-    /*  typing texy animation*/
-    // .typing{
-    //     height: 15vh;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
-    // .typing-effect{
-    //     width: 28ch;
-    //     animation:typing 2.5s steps(22),
-    //     effect 5s step-end infinite ;
-    //     white-space: nowrap;
-    //     border-right: 3px solid;
-    //     overflow: hidden;
-    //     font-variant: monospace;
-    //     font-size: 3rem;
-        
-    // }
-    // @keyframes typing {
-    //     from{
-    //         width: 0;
-    //     }
-       
-    // }
-    // @keyframes effects {
-    //     50%{
-    //         border-color: transparent;
-    //     }
-    // }
-    h1{
-        color: var(--primary-color);
-        margin: 10px;
-       
-        margin-left: -10px;
-    }
-    p{
-        word-wrap: break-word;
-        margin: 10px 0;  
-    }
-
-    button{
-        background-color: var(--primary-color);
-        margin: 25px 0;
-        padding: 15px;
-        border: none;
-        border-radius: 10px;
-        transition: all 0.3s ease-in;
-        cursor: pointer;
-        a{
-            color: var(--black-color);
-            font-weight: bold;
+    @media screen and (max-width:580px){
+        padding-top:0px;
+        .row{
+            flex-direction: column-reverse;
         }
-        
-        &:hover{
-            a{
-                color: var(--white-color);
-             
+        .right_row{
+            img{
+                margin-bottom: 20px;
             }
-           
-            background-color: var(--black-color);
-            transition: all 0.3s ease-out;
-           
         }
     }
 
-    @media screen and (max-width:450px) {
+}
 
-        margin-top: 15px;
-        height: fit-content;
-    
-        div{
-            padding: 10px;
-            width: 100%;
-          
-        }
+.left_row{
+    line-height: 1.5rem;
+    text-align: left;
+    padding: 10px;
+    width: fit-content;
 
-        h3{
-          
-            font-size: 25px;
-            margin: 3px 0px;
-        }
-
-        h1{
-            margin: 3px;
-            font-size: 40px; 
-        }
-    
         p{
-            font-size: 19px;
-            margin: 3px 0;
-            font-weight: 500;
+            text-align: justify;
         }
-
-        // .typing{
-        //     height: 10vh;
-        // }
-
-        // .typing-effect{
-        //     width: 12ch;
-        //     animation:typing 2.5s steps(22),
-        //     effect 5s step-end infinite ;
-        //     white-space: nowrap;
-        //     border-right: 3px solid;
-        //     overflow: hidden;
-        //     font-variant: monospace;
-           
-            
-        // }
-
-        button{
-        margin:25px auto ;
-      
+}
+.home-btn{
+    margin: 15px 15px 15px 0;
+    @media screen and (max-width:1080px){
         a{
             font-size: 15px;
         }
-        }
-
-
     }
-
+}
+h1{
+    font-family: 'Bitter', serif;
+}
+a{
+    color: var(--white-color);
+    &:hover{
+        color: rgb(255,255,255,0.7);
+    }
 }
 
-.App__Header-container-right{
-
-    @media screen and (max-width:450px){
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    
-    }
-
-}
-
-.App__Header-container-right-img{
-    position: relative;
-    display: flex;
-
-    .media{
-        display: none;
-    }
-    
-    div{
-        width: 90%;
-        height: 100%;
-        margin-top: 15px;
-        margin-left: 15px;
-    }
-    
-    img{
-        margin-top: 45px;
-        height:calc(100vh - 82px);
-        width: fit-content;
-        overflow: hidden;
-    }
-
-
-    @media screen and (max-width:450px){
-        width: 50vw;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        .media{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            margin: 5px auto;
-
-            .bluet{
-                color: var(--primary-color);
-            }
-
-            h2{
-                text-transform: uppercase;
-                font-size: 41px;
-                padding: 5px;
-                color: var(--gray-color);
-                margin: 20px auto;
-            }
-        }
-
-        div{
-            margin-top: 0px;
-            margin-right: 50px;
-        }
-          
+.right_row{
+     @media screen and (max-width:666px){
         img{
-            margin-top: 50px;
-            height:fit-content;
-            width: 90vw;
-            
-          
-        }
-
-
-    }
-
-}
-
-.App__Header-slogan-text{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-
-  
-    h1{
-        text-transform: uppercase;
-        font-size: 50px;
-        padding: 5px;
-      color: var(--gray-color);
-      
-        margin: 15px 0;
-
-        span{
-            //color: var(--red-color);
+            width: 75vw;
+            height: fit-content;
         }
     }
+    @media screen and (min-width:660px){
+        img{
+           height: 50vh;
+           width: fit-content;
+        }
+    }
+    @media screen and (min-width:990px){
+        img{
+            width: 45vw;
+            height: fit-content;
+        }
+    }
+    @media screen and (min-width:1080px){
+        img{
+            width: auto;
+            height: 41vw;
+        }
+}
+   overflow: hidden;
+   width: fit-content;
 
+    .profile-img{
+        overflow: hidden;
 
-    @media screen and (max-width:450px){
-
-      display: none;
+        img{
+            object-fit: cover;
+          }
 
     }
-
+        
 }
 
+@media screen and (min-width:1080px){
+    .breakpoint-home{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

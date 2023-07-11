@@ -1,46 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.scss';
 import images from '../../Constant/images';
 import { AppWrap } from '../../Wrapper';
+import AOS from 'aos';
+import "aos/dist/aos.css";
+import { client,urlFor } from '../../client';
+
+
 
 function Home() {
+   const  [testimonials, setTestimonials] = useState([]);
+
+  
+  useEffect(() => {
+
+    const query = '*[_type == "testimonials"]';
+    client.fetch(query)
+    .then((data)=> {
+      data.map(dt => setTestimonials(dt))
+    })
+
+    AOS.init({
+      duration : 1000,
+    });
+  }, []);
+
   return (
  
-      <div className='App__Header-container app__container'>
-        <div className='App__Header-container-left app__flex'>
-          <div>
-            <h3>Hello,I'm</h3>
-            <div className="typing">
-              <div className="typing-effect">
-              <h1>Meganathan.</h1>
+      <div className='App__Header-container app_flex  app__container '>
+        <div className="row breakpoint-home">
+          <div className='col-lg-6'>
+            <div className="left"  data-aos="fade-right" >
+                <h3>Hello, I'm</h3>
+                <h1>{testimonials.name}</h1>
+                <p>{testimonials.feedback}</p>
+                <button className='btn home-btn btn-primary'><a href="#Contact">Get in touch</a></button>
+                <button className='btn home-btn btn-success'><a href={testimonials.resume}  target="_blank">Download CV</a></button>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="right_row"  data-aos="fade-right">
+              <div className="profile-img" >
+                <img src={images.profile} alt="profile" ></img>
               </div>
             </div>
-           
-            <p>
-          I am a Freelance Web Designer. I work with small  business owners, 
-          startups, and individuals who want to get more online visibility.
-        </p>
-        <button><a href='#Contact'>Get in touch</a></button>
-      
           </div>
-        </div>
-        <div className='App__Header-container-right'>
-          <div className='App__Header-container-right-img'>
-            <div>
-              <img src={images.profile} alt="profile" ></img>
-            </div>
-            
-          <div className='App__Header-slogan-text'>
-            <h1 ><span>never</span> settle</h1>
-          </div>
-          <div className="media">
-            <h2 className='bluet'>never</h2>
-            <h2 >settle</h2>
-          </div>
-        </div>
-        </div>
-       
-       
+        </div>      
       </div>
  
   )

@@ -1,0 +1,20 @@
+export default{
+    name:'skills',
+    title:'Skills',
+    type:'document',
+    fields:[
+        {
+            name:'name',
+            title:'Title',
+            type:'string'
+        },
+        {
+            name:'imageurl',
+            title:'ImageURL',
+            type:'image',
+            options:{
+                hotspot:true,
+            }
+        },
+    ]
+}

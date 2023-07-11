@@ -1,109 +1,95 @@
-.App__Skills{
-    flex-direction: column;
-    justify-content: flex-start;
+.App_Skills{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skills-row{
+    display: flex;
+   padding: 0 3%;
+   align-items: flex-start;
+   flex-wrap: wrap;
+   overflow: hidden;
+   --bs-gutter-x: 0;
+}
+.skill-top{
+    height:15%;
 
     p{
-        padding:25px 0;
-    }
-
-    @media screen and (max-width:450px){
-
-
-        p{
-            text-align: justify;
-            padding:10px 0;
-        }
-    }
-}
-
-.App__Skills-skills{
-
-    @media screen and (max-width:450px) {
-        padding: 10px;
-        width: 100%;
-        height: 60%;
-        align-items: center;
-       
+        display: flex;
+        overflow: hidden;
+        text-align: justify;
+        color: var(--black-color);
     }
 }
 
 .App__Skills-skills-container{
+
     display: grid;
-    grid-template-columns: 175px 175px 175px 175px;
-    row-gap: 50px;
-    column-gap: 80px;
-    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+    gap: 15px;
 
 
-
-    @media screen and (max-width:450px){
-        //background-color: rebeccapurple;
-        grid-template-columns: auto;
-        overflow: auto;
-        scroll-behavior: smooth;
-        padding: 25px;
-        width: 55vw;
-        height: 100%;
-        margin: 5px auto;
-
-       &::-webkit-scrollbar{
-        display: none;
-    }    
-    }
-       
-}
-
-.App__Skills-skills-container-item{
-       
-    
-    .Skills-card{
-        background-color: var(--white-color);
-        width: 200px;
-        height: 200px;
+    @media screen and (max-width:1080px){
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
-        border-radius: 15px;
-        box-shadow:10px 10px 15px var(--gray-color);
+        flex-direction: row;
+        overflow-x:auto;
+        scroll-behavior: smooth;
+        padding: 30px 15px;
+        margin: 25px 0;
 
         
-        img{
-            height: 100px;
-            width: fit-content;
-            border-radius: 10px;
-            padding: 2px;
-            margin: 5px;
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
         }
-        h2{
-            font-size: 22px;
-            text-transform: uppercase;
-            padding: 2px;
-            margin: 5px;
-        }
+    }
+}
 
 
-        &:hover{
-            box-shadow: 10px 10px 1.3rem rgb(   0, 150, 255,0.5);
-        }
+.Skills-card{ 
+    
 
-        @media screen and (max-width:450px){
-            width: 150px;
-            height: 150px;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    padding:20px;
+    margin: 10px;
+    background-color: var(--white-color);
+    box-shadow:10px 10px 15px var(--gray-color);
+ 
+        
+           
 
-             img{
-                height: 50px;
-                width: fit-content;
-                border-radius: 10px;
-                padding: 2px;
-                margin: 5px;
-            }
-            h2{
-                font-size: 18px;
-                text-transform: uppercase;
-                padding: 2px;
-                margin: 5px;
-            }
+
+    img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+
+    }
+    h2{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 10px;
+    }        
+        
+    &:hover{
+        box-shadow: 10px 10px 1.3rem rgb(   0, 150, 255,0.5);
+    }
+    @media screen and (max-width:1080px){
+        
+        height: 20vh;
+        width: 15vh;
+        margin-top: 55px;
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
         }
     }
 }

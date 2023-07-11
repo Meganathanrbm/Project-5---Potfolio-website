@@ -1,75 +1,59 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Skills.scss';
 import { AppWrap } from '../../Wrapper';
-import images from '../../Constant/images';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { client, urlFor } from '../../client';    //for sanity client and urlfor is image 
+import { useState } from 'react';
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
-
-const items =[
-  {title:"html",picture:images.html},
-  {title:"css",picture:images.css},
-  {title:"sass",picture:images.sass},
-  {title:"javascript",picture:images.javascript},
-  {title:"node",picture:images.node},
-  {title:"react",picture:images.react},
-  {title:"git",picture:images.git},
-  {title:"python",picture:images.python}
-]
-
-export const MoContainer = {
-  hidden:{opacity: 1 , scale:0},
-  visible:{
-    opacity:1,
-    scale:1,
-    transition:{
-      delayChildren:0.3,
-      staggerChildren:0.2
-    }
-  }
-};
-export const MoItem = {
-  hidden:{y:20,opacity:0},
-  visible:{
-    y:0,
-    opacity:1
-  }
-};
 
 
 
 function Skills() {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {     // useEffect to fetch only one time 
+   const query = '*[_type == "skills"]';    // query for get data from the sanity db
+
+   client.fetch(query)
+   .then((data) =>  setSkills(data))
+
+
+   //this is AOS
+     AOS.init({
+      duration : 1000,
+    });
+  }, [])
+  
+
 
   return (
     <div className='App__Skills App__Content  app__container'>
-      <h1 className='head-text'>Skills <span>&</span> experience</h1>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere est aut delectus vel porro, laudantium,
-      ipsum dolor sit amet consectetur adipisicing elit. Facere est aut delectus vel porro, laudantium, illo cupiditate magnam soluta quos consequuntur tempora vero autem magni dolores! Optio hic cum architecto!</p>
-      <div className='App__Skills-skills'>
-      <motion.div
-        className="App__Skills-skills-container"
-        variants={MoContainer}
-        initial="hidden"
-        whileInView={MoContainer}
-        animate="visible"
-        >
-          {items.map((items,index)=>(
-            <motion.div 
-            whileHover={{scale:1.1}}
-            key={index}
-            className={`App__Skills-skills-container-item app__flex  i-${index}`}
-            variants={MoItem}
-            whileInView={MoItem}
-            >
-              <div className='Skills-card '>
-                <img src={items.picture} alt="image"/>
-                <h2>{items.title}</h2>
-              </div>
-            </motion.div>
-          ))
-
-          }
-
-     </motion.div>
+      <div className="row skills-row">
+          <div className="skill-top">
+              <h1 data-aos="fade-right" className='head-text' >Skills <span>&</span> experience</h1>
+              <p data-aos="fade-up" className='container-fluid'>I bring a youthful perspective and fresh ideas to create visually appealing and user-friendly interfaces. 
+                With expertise in ReactJS, HTML, CSS, JavaScript, Node.js, and the MERN stack, I am equipped to build robust web applications. 
+                Throughout my career, I have successfully completed numerous projects, demonstrating my ability to transform ideas into reality.
+              </p>
+          </div>
+          <div className="skill-bottom">
+          <div  className="App__Skills-skills-container "  >
+              {skills.map((items,index)=>(
+                <motion.div 
+                whileHover={{scale:1.1}}
+                key={index}
+                className={` App__Skills-skills-container-item app__flex  i-${index}`}
+                >
+                  <div className='Skills-card' data-aos="flip-left">
+                    <img src={urlFor(items.imageurl)}  alt={items.name}/>
+                    <h2>{items.name}</h2>
+                  </div>
+                </motion.div>
+              ))}
+          </div>
+          </div>
       </div>
 
     </div>

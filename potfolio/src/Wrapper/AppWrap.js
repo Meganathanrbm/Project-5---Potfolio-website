@@ -1,5 +1,5 @@
 import React from 'react';
-import {Socialmedia, Navigationdots} from '../Components';
+import {Socialmedia} from '../Components';
 
 const AppWrap = (Component, idName, className) => function IOC() {
   return (
@@ -8,7 +8,7 @@ const AppWrap = (Component, idName, className) => function IOC() {
         <div className='app__flex app__wrapper'>
             <Component/>
         </div>
-        <Navigationdots active={idName}/>
+
     </div>
   )
 }

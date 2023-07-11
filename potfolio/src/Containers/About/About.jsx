@@ -1,61 +1,41 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.scss';
 import { AppWrap } from '../../Wrapper';
-import { motion } from 'framer-motion';
 import images from '../../Constant/images';
-import { MoContainer,MoItem } from '../Skills/Skills';
-
-const Aitems=[
-  {field:"name :",value:"meganathan"},
-  {field:"age :",value:20},
-  {field:"email :",value:"meganathanrbm@gmail.com",name:'email'},
-  {field:"location :",value:"tamil nadu,india"},
-  {field:"qualification :",value:"b.sc CS"},
-  {field:"experince :",value:"---"}
-]
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 function About() {
+  useEffect(() => {
+    AOS.init({
+      duration : 1000,
+    });
+  }, []);
+
+
   return (
     <div className='App__About App__Content app__container'>
-      <div className='App__About-left app__flex'>
-          <div className='card-image app__flex'>
-            <img src={images.about01} alt="profile picture"></img>
+      <div className="row about-row ">
+        <div className="col-lg-6 about-left">
+          <div className="about-img" data-aos="fade-right">
+              <img src={images.profile} alt="profile picture"/>
           </div>
-      </div>
-      <div className='App__About-right app__flex'>
-        <div>
-          <h3>Discover</h3>
-          <h1>About Me</h1>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat voluptate et reiciendis, architecto
-              consequuntur delectus vel magni accusantium dicta, voluptates sit esse est quia
-               architecto
-              consequuntur delectus vel magni accusantium dicta, voluptates sit esse est quia
-              necessitatibus magnam! Labore repellat voluptas ipsa.</p>
-
-            <motion.div
-              className='App__About-card'
-              variants={MoContainer}
-              initial="hidden"
-              animate="visible"
-              >
-               {Aitems.map((items,index)=>(
-                  <motion.div 
-                    key={index}
-                    variants={MoItem}>
-                      <div className='About-card-item' key={index}>
-                          <text className='text-field'>{items.field}</text>
-                          <text className={`text-value  ${items.name}`}>{items.value}</text>
-                      </div>
-                  </motion.div>
-                ))
-               }
-            </motion.div>
-
-            <div className="App__About-icon">
-            <img src={images.aboutIcon02} />
-              <img src={images.aboutIcon} />
-            </div>
-  
+        </div>
+        <div className="col-lg-6 about-right">
+          <div className="about-content">
+          <h3 data-aos="fade-up">Discover</h3>
+          <h1 data-aos="fade-up">About Me</h1>
+              <p  data-aos="fade-up">
+                  Welcome to my portfolio website! I'm Meganathan, a skilled developer specializing in front-end and back-end development. 
+                  At the age of 21, I bring a youthful perspective and fresh ideas to create visually appealing and user-friendly interfaces. 
+                  With expertise in ReactJS, HTML, CSS, JavaScript, Node.js, and the MERN stack.</p>
+              <p  className='hide-para' data-aos="fade-up">Throughout my career, I have successfully completed numerous projects, demonstrating my ability to 
+                  transform ideas into reality. I am constantly exploring new technologies and leveraging them to deliver exceptional results.
+                  This portfolio website showcases a collection of my work, providing a glimpse into my professional journey.</p>
+              <p  className='hide-para' data-aos="fade-up"> I am passionate about development and eager to contribute my skills to your projects. 
+              Please feel free to explore my portfolio and reach out to me with any inquiries or collaboration opportunities.</p>
+              <p  data-aos="fade-up">Thank you for visiting, and I look forward to connecting with you soon!</p>      
+          </div>
         </div>
       </div>
     </div>

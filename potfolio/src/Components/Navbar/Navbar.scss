@@ -14,7 +14,7 @@
     background-color: rgba(255,255,255,0.25);
     border: 1px solid  rgba(255,255,255,0.18);
 
-    @media screen and (max-width:450px) {
+    @media screen and (max-width:1080px) {
             position: fixed;
     }
     
@@ -23,18 +23,17 @@
 .App__Navbar-logo{
     img{
         width: 150px;
-        height: 150px;
+        height: auto;
         cursor: pointer;
         
-        @media screen and (max-width:450px) {
+        @media screen and (max-width:1080px) {
              width: 100px;
-             height: 100px;
         }
     }
  
     padding: 8px;
 
-    @media screen and (max-width:450px) {
+    @media screen and (max-width:1080px) {
         padding: 5px;
     }  
 }
@@ -49,7 +48,7 @@ margin-top: 10px;
     flex-direction: column; 
     cursor: pointer; 
 
-    @media screen and (max-width:450px) {
+    @media screen and (max-width:1080px) {
          margin: 0 5px;
          display: none;
     }
@@ -99,7 +98,7 @@ margin-top: 10px;
     padding: 5px;
     flex-direction: column;
   
-    @media screen and (min-width:450px) {
+    @media screen and (min-width:1080px) {
         display: none;
     }
     button{
@@ -113,16 +112,10 @@ margin-top: 10px;
         margin: 10px;
         transition: all 0.3s ease-in-out;
         
-      top: 0;
-      right: 0;
-      position: fixed;
-        
-        &:hover{
-            background-color:var(--primary-color) ;
-            i{
-                color:var(--white-color);
-            }
-        }
+        top: 0;
+        right: 0;
+        position: fixed;
+    
     }
 }
 
@@ -131,6 +124,7 @@ margin-top: 10px;
 width: 100vw;
 height: 100vh;
 position: absolute;
+overscroll-behavior: contain;
 top: 0;
 left: 0;
 
@@ -145,6 +139,8 @@ left: 0;
 button{
    margin-right: 10px;
    transition: all 0.3s ease-in-out;
+   background-color: transparent;
+
 }
 
 .App__Navbar-menu-false-list{
