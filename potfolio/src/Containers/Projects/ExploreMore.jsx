@@ -34,8 +34,8 @@ function ExploreMore() {
               <div className='card-body'>
                   <h5 className='card-title'>{item.name}</h5>
                    <p className='card-text'>{item.description}</p>
-                    <a href={item.livedemo} className="btn btn-primary">Live Demo</a>
-                    <a href={item.github} className="btn btn-secondary">Github</a>
+                    <a href={item.livedemo}  target="_blank" className="btn btn-primary">Live Demo</a>
+                    <a href={item.github}  target="_blank" className="btn btn-secondary">Github</a>
                 </div>
             </div> 
          </motion.div>
