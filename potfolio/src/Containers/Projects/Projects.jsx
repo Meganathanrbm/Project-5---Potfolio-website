@@ -39,7 +39,7 @@ function Projects() {
                      Discover my diverse project showcase where passion meets functionality, representing 
                      unique journeys of growth, delivering impactful solutions.
                     </p>
-                    <Link  to="/explore"  className='link' data-aos="fade-up">explore more <i  className='fa fa-arrow-right'></i></Link>
+                    <Link  to="Projects/exploremore"   className='link' data-aos="fade-up">explore more <i  className='fa fa-arrow-right'></i></Link>
                 </div>
           </div>
           <div className="projects-bottom">
