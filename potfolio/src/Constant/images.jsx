@@ -6,12 +6,18 @@ import mobile from '../Assets/mobile.png';
 import api from '../Assets/api.png';
 import cpp from '../Assets/cpp.png';
 import css from '../Assets/css.png';
-
+import excel from '../Assets/excel.png';
+import github from '../Assets/github.png';
+import json from '../Assets/json.png';
+import vscode from '../Assets/vscode.png';
+import mongodb from '../Assets/mongodb.png';
+import npm from '../Assets/npm.png';
 import flutter from '../Assets/flutter.png';
 import git from '../Assets/git.png';
 import graphql from '../Assets/graphql.png';
 import html from '../Assets/html.png';
 import javascript from '../Assets/javascript.png';
+import tailwind from '../Assets/Tailwind CSS.png';
 import mu5 from '../Assets/mu5.png';
 import node from '../Assets/node.png';
 import python from '../Assets/python.png';
@@ -21,33 +27,30 @@ import sass from '../Assets/sass.png';
 import typescript from '../Assets/typescript.png';
 import vue from '../Assets/vue.png';
 
-import about01 from '../Assets/about01.jpg';
-import about02 from '../Assets/about02.png';
-import about03 from '../Assets/about03.png';
-import about04 from '../Assets/about04.png';
 
 import profile from '../Assets/profile.png';
+import profile01 from '../Assets/profile01.jpg';
 import circle from '../Assets/circle.svg';
-import logo from '../Assets/logo.png';
+import logo_light from '../Assets/logo_light.png';
+import logo_dark from '../Assets/logo_dark.png';
 
-import adidas from '../Assets/adidas.png';
-import amazon from '../Assets/amazon.png';
-import asus from '../Assets/asus.png';
-import bolt from '../Assets/bolt.png';
 import nb from '../Assets/nb.png';
+import feelingProud from '../Assets/feelingProud.svg';
 
-
-import aboutIcon from '../Assets/aboutIcorn.png';
-import aboutIcon02 from '../Assets/aboutIcon02.png'
 
 export default {
-  aboutIcon,
-  aboutIcon02,
   email,
+  excel,
+  vscode,
+  json,
+  npm,
+  mongodb,
+  github,
   mobile,
   api,
   cpp,
   css,
+  feelingProud,
   flutter,
   git,
   graphql,
@@ -56,6 +59,7 @@ export default {
   mu5,
   node,
   python,
+  tailwind,
   project01,
   project02,
   project03,
@@ -64,17 +68,11 @@ export default {
   sass,
   typescript,
   vue,
-  about01,
-  about02,
-  about03,
-  about04,
   profile,
+  profile01,
   circle,
-  logo,
-  adidas,
-  amazon,
-  asus,
-  bolt,
+  logo_light,
+  logo_dark,
   nb,
 
 };

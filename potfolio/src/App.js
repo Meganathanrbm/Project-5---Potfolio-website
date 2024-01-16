@@ -1,51 +1,28 @@
 import React from 'react';
-import './App.scss';
-import {Navbar} from './Components';
-import{Home,About,Skills,Projects,Contact,Footer,ExploreMore} from './Containers';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
-function Layout(){
-  return(
-    <div className='app'>
-      <Navbar/>
-      <Home/>
-      <hr/>
-      <About/>
-      <hr/>
-      <Skills/>
-      <hr/>
-      <Projects/>
-      <hr/>
-      <Contact/>
-      <Footer/>
-    </div>
-  )
-}
-
-function Explore(){
-  return(
-    <div className="explore">
-       <Navbar/>
-       <ExploreMore />
-       <Footer/>
-    </div>
-  )
-}
+import Nav from './components/Nav';
+import Home from './sections/Home';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import Footer from './sections/Footer';
 
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" >
-        <Route index element={<Layout />} />
-        <Route path="explore" element={<Explore />} />
-        <Route path="*" element={<Layout />} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+    <div className='bg-[#edf2f8] overflow-hidden dark:bg-gray-900'>
+     <Nav />
+     <Home/>
+     <hr className='hr'/>
+     <About/>
+     <hr className='hr'/>
+     <Skills/>
+     <hr className='hr'/>
+     <Projects/>
+     <hr className='hr'/>
+     <Contact/>
+     <Footer/>
+    </div>
   )
 }
 
