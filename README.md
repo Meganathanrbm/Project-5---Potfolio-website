@@ -1,11 +1,7 @@
 # Potfolio-website
 
 // LIVE Demo...
-
-
-<<<<<<< HEAD
-https://portfolio-934d3.web.app/
-
+https://meganathan.netlify.app/
 
 
 =======
