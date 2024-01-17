@@ -100,7 +100,7 @@ const Projects = () => {
                   alt="Card image cap"
                 />
                 <div className="">
-                  <h5 className="capitalize max-w-[290px] dark:text-white text-lg mt-3 mb-2 font-medium leading-[25px]">
+                  <h5 className="capitalize max-w-[290px] dark:text-white text-base mt-3 mb-2 font-medium leading-[25px]">
                     {item.name}
                   </h5>
                   <div className="mt-3 flex flex-nowrap">

@@ -54,11 +54,12 @@ const Contact = () => {
       {!formSubmit ? (
         <div className="center">
           <form
+            data-aos="fade-up"
             action=""
             onSubmit={formSubmitted}
             className="w-[95%] md:w-[55%]"
           >
-            <div data-aos="fade-up" className="form-group my-3">
+            <div  className="form-group my-3">
               <label className="label">Your name</label>
               <input
                 type="text"
@@ -69,7 +70,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div data-aos="fade-up" className="form-group my-3">
+            <div  className="form-group my-3">
               <label className="label">Email address</label>
               <input
                 type="email"
@@ -81,7 +82,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div data-aos="fade-up" className="form-group my-3">
+            <div  className="form-group my-3">
               <label className="label">Message</label>
               <textarea
                 placeholder="Enter Your Message"
@@ -94,7 +95,7 @@ const Contact = () => {
               ></textarea>
             </div>
             <button
-              data-aos="fade-up"
+              
               className="capitalize btn btn-primary md:mt-4 my-3 bg-blue-500"
               type="submit"
             >

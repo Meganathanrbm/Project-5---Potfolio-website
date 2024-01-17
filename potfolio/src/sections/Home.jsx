@@ -4,7 +4,6 @@ import "aos/dist/aos.css";
 import { client } from "../client";
 import images from "../Constant/images";
 import CButton from "../components/CButton";
-import { Link, useHistory } from 'react-router-dom';
 
 function Home() {
   const [testimonials, setTestimonials] = useState([]);

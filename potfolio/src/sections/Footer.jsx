@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "../client";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FaFacebookF } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -29,6 +30,9 @@ const Footer = () => {
           </a>
           <a className="footer_icon" href={testimonials.linkedin} target="_blank">
             <BsLinkedin />
+          </a>
+          <a className="footer_icon" href={testimonials.github} target="_blank">
+          <FaGithub />
           </a>
         </div>
       </div>

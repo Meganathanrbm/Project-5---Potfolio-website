@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../Constant";
 import DarkModeToggle from "./DarkModeToggle";
 import Hamburger from "hamburger-react";
-import { Box, Divider, Drawer } from "@mui/material";
+import { Box,  Drawer } from "@mui/material";
 
 const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(false); //for toggle dark mode
@@ -29,8 +29,8 @@ const Nav = () => {
       <ul className="px-4">
         {navLinks.map((li, i) => (
           <li key={i} className="p-3 my-1 group" onClick={() => setOpen(false)}>
-            <a key={i} href={li.href}>
-              <div className="text-black flex flex-nowrap items-center gap-[10px] cursor-pointer dark:text-white  uppercase text-base transition duration-150 ease-in  group-hover:text-blue-500 font-semibold">
+            <a key={i} href={li.href} >
+              <div className="text-black flex flex-nowrap items-center gap-[10px] cursor-pointer dark:text-white  uppercase text-base transition duration-150 ease-in   group-hover:text-blue-500 font-semibold">
                 {li.icon}
                 {li.title}
               </div>
@@ -75,7 +75,7 @@ const Nav = () => {
       <ul className="hidden md:center w-full h-full justify-evenly">
         {navLinks.map((li, i) => (
           <li key={i} className="mx-[18px] lg:px-3 py-3 group h-full lg:mx-8">
-            <a key={i} href={li.href}>
+            <a key={i} href={li.href} >
               <div className="text-black cursor-pointer dark:text-white  uppercase text-base transition duration-150 ease-in  group-hover:text-blue-500 font-semibold">
                 {li.title}
               </div>

@@ -1,14 +1,21 @@
-import React, { useEffect } from "react";
-import { skills } from "../Constant";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { client, urlFor } from "../client";
 
 const Skills = () => {
+  const [skills , setSkills ] = useState([]);
+  console.log(skills)
   useEffect(()=>{
+    const query = '*[_type == "skills"]';
+    client.fetch(query).then((data) => setSkills(data));
+
+
     AOS.init({
       duration: 1000,
     });
-  },[])
+  },[]);
+
   return (
     <section id="Skills" className="app">
       <div className="row skills-row">
@@ -33,7 +40,7 @@ const Skills = () => {
                   <div data-aos="fade-up" className="center flex-nowrap rounded-md  shadow-md bg-[#FBF9F1] p-2 px-3 m-2 sm:m-3 gap-2 sm:gap-3" key={j}>
                     <img
                       className="sm:h-10 sm:w-10 h-8 w-8 object-cover object-center"
-                      src={skill.imageSrc}
+                      src={urlFor(skill.imageSrc)}
                       alt={skill.imageSrc}
                     />
                     <h2 className="text-base  md:text-lg  font-semibold ">
