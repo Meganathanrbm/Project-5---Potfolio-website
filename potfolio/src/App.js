@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Nav from './components/Nav';
 import Home from './sections/Home';
 import About from './sections/About';
