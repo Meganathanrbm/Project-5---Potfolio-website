@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../Constant";
 import DarkModeToggle from "./DarkModeToggle";
 import Hamburger from "hamburger-react";
-import { Box,  Drawer } from "@mui/material";
+import { Box, Drawer } from "@mui/material";
 
 const Nav = () => {
   const [isDarkMode, setIsDarkMode] = useState(false); //for toggle dark mode
@@ -19,7 +19,10 @@ const Nav = () => {
       role="presentation"
       className="bg:lightGray_color dark:bg-gray-800 h-full px-2 flex py-6 flex-col"
     >
-      <Link to="/" className="h-16 w-auto flex justify-start items-center overflow-hidden py-2.5 px-4 mb-1">
+      <Link
+        to="/"
+        className="h-16 w-auto flex justify-start items-center overflow-hidden py-2.5 px-4 mb-1"
+      >
         <img
           src={isDarkMode ? images.logo_dark : images.logo_light}
           className="h-20 shrink-0   block w-auto"
@@ -29,7 +32,7 @@ const Nav = () => {
       <ul className="px-4">
         {navLinks.map((li, i) => (
           <li key={i} className="p-3 my-1 group" onClick={() => setOpen(false)}>
-            <a key={i} href={li.href} >
+            <a key={i} href={li.href}>
               <div className="text-black flex flex-nowrap items-center gap-[10px] cursor-pointer dark:text-white  uppercase text-base transition duration-150 ease-in   group-hover:text-blue-500 font-semibold">
                 {li.icon}
                 {li.title}
@@ -59,8 +62,8 @@ const Nav = () => {
   return (
     <nav
       className={`${
-        visible ? "hidden" : "flex"
-      } app_nav top-0  bg-[rgba(255, 255, 255, 0.25)] border-2 border-[rgba(255,255,255,0.2)] dark:border-[rgba(0,0,0,0.2)] padding-x dark:bg-[rgba(0,0,0,0.4)]`}
+        visible ? "-top-full" : "top-0"
+      } app_nav  flex bg-[rgba(255, 255, 255, 0.25)] border-2 border-[rgba(255,255,255,0.2)] dark:border-[rgba(0,0,0,0.2)] padding-x dark:bg-[rgba(0,0,0,0.4)]`}
     >
       <Link
         to="/"
@@ -75,7 +78,7 @@ const Nav = () => {
       <ul className="hidden md:center w-full h-full justify-evenly">
         {navLinks.map((li, i) => (
           <li key={i} className="mx-[18px] lg:px-3 py-3 group h-full lg:mx-8">
-            <a key={i} href={li.href} >
+            <a key={i} href={li.href}>
               <div className="text-black cursor-pointer dark:text-white  uppercase text-base transition duration-150 ease-in  group-hover:text-blue-500 font-semibold">
                 {li.title}
               </div>

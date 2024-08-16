@@ -13,7 +13,9 @@ const Projects = () => {
     const query = '*[_type == "projects"]';
     const query2 = '*[_type == "certificates"]';
 
-    client.fetch(query).then((data) => setProjects(data));
+    client
+      .fetch(query)
+      .then((data) => setProjects(data.sort((a, b) => a.rank - b.rank)));
     client.fetch(query2).then((data) => setCertificates(data));
 
     AOS.init({
@@ -57,7 +59,10 @@ const Projects = () => {
         {projectsVisible &&
           projects.map((item, index) => (
             <motion.div key={index} whileHover={{ scale: 1.08 }}>
-              <div data-aos="fade-up" className=" shadow-lg dark:bg-slate-800 md:h-96 hover:shadow-blue-500/50 flex justify-center items-start flex-col p-3 rounded-md ">
+              <div
+                data-aos="fade-up"
+                className=" shadow-lg dark:bg-slate-800 md:h-96 hover:shadow-blue-500/50 flex justify-center items-start flex-col p-3 rounded-md "
+              >
                 <img
                   className={`w-[290px] h-40   md:w-96 md:h-48  object-cover  img-fluid  ${item.name}`}
                   src={urlFor(item.imageurl)}
@@ -93,7 +98,10 @@ const Projects = () => {
         {!projectsVisible &&
           certificates.map((item, index) => (
             <motion.div key={index} whileHover={{ scale: 1.08 }}>
-              <div data-aos="fade-up" className=" shadow-lg dark:bg-slate-800 h-auto hover:shadow-blue-500/50 flex justify-center items-start flex-col p-3 rounded-md ">
+              <div
+                data-aos="fade-up"
+                className=" shadow-lg dark:bg-slate-800 h-auto hover:shadow-blue-500/50 flex justify-center items-start flex-col p-3 rounded-md "
+              >
                 <img
                   className={`w-[290px] h-auto   md:w-96 md:h-48  object-cover  img-fluid  ${item.name}`}
                   src={urlFor(item.imageUrl)}

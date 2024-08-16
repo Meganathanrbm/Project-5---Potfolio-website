@@ -31,5 +31,10 @@ export default{
             title:'LiveDemo',
             type:'string'
         },
+        {
+            name:'rank',
+            title:'Rank',
+            type:"number"
+        }
     ]
 }
