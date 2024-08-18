@@ -93,8 +93,12 @@ const About = () => {
               <h2 className="text-blue-500 m-0 text-xl font-medium">
                 Full Stack Developer (Intern)
               </h2>
-              <h3 className="text-lg font-medium text-black">Self-learning</h3>
-              <h4 className="text-gray-500 text-base mt-1">2023 - Present</h4>
+              <h3 className="text-lg font-medium text-black">
+                Grafixui - Chennai
+              </h3>
+              <h4 className="text-gray-500 text-base mt-1">
+                Mar 2024 - Jun 2024
+              </h4>
             </div>
           </div>
         </div>

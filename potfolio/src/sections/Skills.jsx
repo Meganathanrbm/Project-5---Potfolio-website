@@ -5,7 +5,6 @@ import { client, urlFor } from "../client";
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
-  console.log(skills);
   useEffect(() => {
     const query = '*[_type == "skills"]';
     client.fetch(query).then((data) => setSkills(data));
@@ -59,7 +58,7 @@ const Skills = () => {
                       >
                         <img
                           className="sm:h-10 sm:w-10 h-8 w-8 object-cover object-center"
-                          src={skill.imageSrc && urlFor(skill.imageSrc)}
+                          src={urlFor(skill.imageSrc)}
                           alt={skill?.imageSrc}
                         />
                         <h2 className="text-base  md:text-lg  font-semibold ">
@@ -79,16 +78,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
-{
-  /* <div key={i} className="center flex-col p-2">
-              <img
-                className="h-14 w-14 md:h-28 md:w-28 lg:w-36 lg:h-36 object-cover object-center"
-                src={urlFor(items.imageurl)}
-                alt={items.name}
-              />
-              <h2 className="text-base dark:text-white md:text-xl mt-2 font-semibold">
-                {items.name}
-              </h2>
-            </div> */
-}

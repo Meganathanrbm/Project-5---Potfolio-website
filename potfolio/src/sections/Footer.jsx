@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../client";
 import { BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 const Footer = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -17,26 +17,55 @@ const Footer = () => {
   return (
     <footer className="padding w-screen bg-[#25262b]">
       <div className="center flex-col">
-        <h4 className="text-center text-3xl font-semibold text-white border-b-4 rounded-sm border-blue-500 inline-block">Follow us</h4>
+        <h4 className="text-center text-3xl font-semibold text-white border-b-4 rounded-sm border-blue-500 inline-block">
+          Follow us
+        </h4>
         <div className="center my-3">
-          <a className="footer_icon" href={testimonials.facebook} target="_blank">
-            <FaFacebookF />
+          <a
+            className="footer_icon"
+            href={testimonials.leetcode}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiLeetcode />
           </a>
-          <a className="footer_icon" href={testimonials.instagram} target="_blank">
+          <a
+            className="footer_icon"
+            href={testimonials.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsInstagram />
           </a>
-          <a className="footer_icon" href={testimonials.twitter} target="_blank">
+          <a
+            className="footer_icon"
+            href={testimonials.twitter}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsTwitter />
           </a>
-          <a className="footer_icon" href={testimonials.linkedin} target="_blank">
+          <a
+            className="footer_icon"
+            href={testimonials.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <BsLinkedin />
           </a>
-          <a className="footer_icon" href={testimonials.github} target="_blank">
-          <FaGithub />
+          <a
+            rel="noopener noreferrer"
+            className="footer_icon"
+            href={testimonials.github}
+            target="_blank"
+          >
+            <FaGithub />
           </a>
         </div>
       </div>
-      <p className="text-white mt-1 text-base  text-center">Copyright &copy; {year} | ❤️ | By Meganathan.</p>
+      <p className="text-white mt-1 text-base  text-center">
+        Copyright &copy; {year} | ❤️ | By Meganathan.
+      </p>
     </footer>
   );
 };
