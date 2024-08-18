@@ -59,7 +59,7 @@ const Skills = () => {
                       >
                         <img
                           className="sm:h-10 sm:w-10 h-8 w-8 object-cover object-center"
-                          src={urlFor(skill?.imageSrc)}
+                          src={skill.imageSrc && urlFor(skill.imageSrc)}
                           alt={skill?.imageSrc}
                         />
                         <h2 className="text-base  md:text-lg  font-semibold ">

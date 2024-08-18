@@ -20,8 +20,6 @@ const About = () => {
         birthdate.getMonth(),
         birthdate.getDate()
       ));
-      
-
 
   return (
     <section className="app" id="About">
@@ -50,14 +48,14 @@ const About = () => {
               </div>
             </div>
             <p data-aos="fade-up" className="para py-2">
-              Hello! I'm Meganathan, a {age}-year-old web developer specializing in
-              the captivating world of the MERN stack. Proficient in HTML, CSS,
-              Bootstrap, JavaScript, React js, Tailwind CSS, Sass, Mongodb, ejs,
-              Express, Redux, REST API, and DBMS, I create visually enticing
-              user interfaces. Through the magic of React.js, I bring front-end
-              dynamics to life, and with the strength of Node.js, I build robust
-              back-end solutions. Let's join forces and transform your digital
-              aspirations into an irresistibly engaging reality!
+              Hello! I'm Meganathan, a {age}-year-old web developer specializing
+              in the captivating world of the MERN stack. Proficient in HTML,
+              CSS, Bootstrap, JavaScript, React js, Tailwind CSS, Sass, Mongodb,
+              ejs, Express, Redux, REST API, and DBMS, I create visually
+              enticing user interfaces. Through the magic of React.js, I bring
+              front-end dynamics to life, and with the strength of Node.js, I
+              build robust back-end solutions. Let's join forces and transform
+              your digital aspirations into an irresistibly engaging reality!
             </p>
           </div>
         </div>
@@ -93,7 +91,7 @@ const About = () => {
             </div>
             <div data-aos="fade-left" className="before:bg-blue-500 rounded-sm">
               <h2 className="text-blue-500 m-0 text-xl font-medium">
-                Web Development and Design
+                Full Stack Developer (Intern)
               </h2>
               <h3 className="text-lg font-medium text-black">Self-learning</h3>
               <h4 className="text-gray-500 text-base mt-1">2023 - Present</h4>
